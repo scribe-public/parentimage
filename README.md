@@ -114,3 +114,6 @@ In case one wants a condensed version - a map from hash concatination to the ima
     --outfile      filename for output file, defaults to small_image_index.json
 ```
 
+
+## License 
+This project is licensed under the AGPL License. The full license can be found in the [LICENSE](agpl-3.0.txt) file.
