@@ -48,6 +48,7 @@ def get_base_image_endpoint():
 
 
 def get_base_image(hash_list):
+    global image_index
     prefix = ""
     for l in hash_list:
         prefix += l
