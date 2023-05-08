@@ -7,9 +7,23 @@ from datetime import datetime
 import json
 import logging
 from functools import cmp_to_key
-from get_bimage_index import compare_layer, write_json, get_json
 
 from flask import Flask, jsonify, request
+
+def get_json(filename):
+    if(os.path.exists(filename)):
+        with open(filename, 'r', encoding='utf-8') as f:
+            obj = json.load(f)
+        return obj
+    else:
+        log.warn("In get_json, file {} does not exist".format(filename))
+        return(None)
+
+
+def write_json(filename, obj):
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(obj, f, ensure_ascii=False, indent=4)
+
 
 app = Flask(__name__)
 
@@ -79,7 +93,20 @@ def get_base_image_by_sbom(gensbom_filename):
     log.info("Request:{} \nResult:{}".format(gensbom_filename, result))
     return result
 
-
+def compare_layer(item1, item2):
+    for p in item1["properties"]:
+        if p["name"]=="index":
+            l1 = p["value"]
+            break
+    for p in item2["properties"]:
+        if p["name"]=="index":
+            l2 = p["value"]
+            break
+    if l1 < l2:
+        return -1
+    if l1 > l2:
+        return 1
+    return 0
 
 def main(args):
     global image_index
