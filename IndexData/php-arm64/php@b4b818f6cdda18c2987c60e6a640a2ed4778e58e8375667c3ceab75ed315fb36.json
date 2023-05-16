@@ -1,0 +1,410 @@
+{
+    "862f395ddd3126f4516cfec2e59f16622fac16d61420b013245b44ed6a6a824b29ccf4f6e9bf9312c69e5d1fcb5b4254bc92e4e782c4fe36c9403d318c577693b6dc7af2978ed0f39efaca9a60a2bdc08f6e92a3867c6c8e0d00625d0e757b0efe28e09c5c9a8379d071e03c8b7923ec8bc5cd79f57b681036d9a21ae86eb9a2843de48aab3435d2a2b91abb0c0a27e4cdba0ad7a43fb660deeb561ec2ad2bd8afa5fd218762f2b09144a55dbc020ee6c9befd600454d365bb2a93ac81a3dc968720c2d512e3ceb8ec9886b498117fcf8b4669082a6093e5cf868b632e555c441173f82cf0751cd6e6ef41801c6f6bac2ef2e34d5fdc9c25d84bfd1626e443ad5e3bed7e2d2b1d1d434320cf1bdbc085c8ea6a87a4c3c765e48489d120fccf433d853caefc79d0001e2816a07d2595280ae3716e8edf1ce1c0ee9afe8cfa33172c6d7f8675fdfdb711f4029a7e59d0399444f79cbbac215563a5831ebbcd9e8b69899e54d2c37976baae8c8cd323c234fc15f31fedda54e80e92965d7a2f066b6fca4e211f7f884593d08b829a1b620c6f9e4a577d98b3d8a79fe4b19d46c41cd0e93a4045fd86043831f1f6563e372ee4510d91a030d2cb654baf05b521452c": [
+        {
+            "image_metadata": {
+                "repo": "php",
+                "image_tag": "7.2.2-apache",
+                "last_updated": "2018-02-20T12:42:57.980062Z",
+                "tag_last_pushed": "2018-02-20T12:42:57.980062Z",
+                "arch": "arm64",
+                "image_digest": "sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36",
+                "image_status": "active",
+                "image_push_date": null
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:862f395ddd3126f4516cfec2e59f16622fac16d61420b013245b44ed6a6a824b?index=0&ID=bbe491ad29b077ec",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:862f395ddd3126f4516cfec2e59f16622fac16d61420b013245b44ed6a6a824b",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "862f395ddd3126f4516cfec2e59f16622fac16d61420b013245b44ed6a6a824b"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:862f395ddd3126f4516cfec2e59f16622fac16d61420b013245b44ed6a6a824b?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "50595381"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:d2e12f27812a401bc7a8b63ad29adabafa065e3016b860f8a168e59638974a1b in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:29ccf4f6e9bf9312c69e5d1fcb5b4254bc92e4e782c4fe36c9403d318c577693?index=1&ID=bda1ea344b8685cc",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:29ccf4f6e9bf9312c69e5d1fcb5b4254bc92e4e782c4fe36c9403d318c577693",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "29ccf4f6e9bf9312c69e5d1fcb5b4254bc92e4e782c4fe36c9403d318c577693"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:29ccf4f6e9bf9312c69e5d1fcb5b4254bc92e4e782c4fe36c9403d318c577693?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "46"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -eux; \t{ \t\techo 'Package: php*'; \t\techo 'Pin: release *'; \t\techo 'Pin-Priority: -1'; \t} > /etc/apt/preferences.d/no-debian-php"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:b6dc7af2978ed0f39efaca9a60a2bdc08f6e92a3867c6c8e0d00625d0e757b0e?index=2&ID=f4f8b83e2f3d46d4",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:b6dc7af2978ed0f39efaca9a60a2bdc08f6e92a3867c6c8e0d00625d0e757b0e",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "b6dc7af2978ed0f39efaca9a60a2bdc08f6e92a3867c6c8e0d00625d0e757b0e"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:b6dc7af2978ed0f39efaca9a60a2bdc08f6e92a3867c6c8e0d00625d0e757b0e?index=2",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "177686779"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "apt-get update && apt-get install -y \t\t$PHPIZE_DEPS \t\tca-certificates \t\tcurl \t\txz-utils \t--no-install-recommends && rm -r /var/lib/apt/lists/*"
+                        },
+                        {
+                            "name": "index",
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:fe28e09c5c9a8379d071e03c8b7923ec8bc5cd79f57b681036d9a21ae86eb9a2?index=3&ID=586a0cbd65378f73",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:fe28e09c5c9a8379d071e03c8b7923ec8bc5cd79f57b681036d9a21ae86eb9a2",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "fe28e09c5c9a8379d071e03c8b7923ec8bc5cd79f57b681036d9a21ae86eb9a2"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:fe28e09c5c9a8379d071e03c8b7923ec8bc5cd79f57b681036d9a21ae86eb9a2?index=3",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "0"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "mkdir -p $PHP_INI_DIR/conf.d"
+                        },
+                        {
+                            "name": "index",
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:843de48aab3435d2a2b91abb0c0a27e4cdba0ad7a43fb660deeb561ec2ad2bd8?index=4&ID=b166ca79c0cba3d9",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:843de48aab3435d2a2b91abb0c0a27e4cdba0ad7a43fb660deeb561ec2ad2bd8",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "843de48aab3435d2a2b91abb0c0a27e4cdba0ad7a43fb660deeb561ec2ad2bd8"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:843de48aab3435d2a2b91abb0c0a27e4cdba0ad7a43fb660deeb561ec2ad2bd8?index=4",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "41437443"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "apt-get update \t&& apt-get install -y --no-install-recommends \t\tapache2 \t&& rm -rf /var/lib/apt/lists/*"
+                        },
+                        {
+                            "name": "index",
+                            "value": "4"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:afa5fd218762f2b09144a55dbc020ee6c9befd600454d365bb2a93ac81a3dc96?index=5&ID=3c1b2b309f6a623c",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:afa5fd218762f2b09144a55dbc020ee6c9befd600454d365bb2a93ac81a3dc96",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "afa5fd218762f2b09144a55dbc020ee6c9befd600454d365bb2a93ac81a3dc96"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:afa5fd218762f2b09144a55dbc020ee6c9befd600454d365bb2a93ac81a3dc96?index=5",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "1924"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -ex \t\t&& sed -ri 's/^export ([^=]+)=(.*)$/: ${\\1:=\\2}\\nexport \\1/' \"$APACHE_ENVVARS\" \t\t&& . \"$APACHE_ENVVARS\" \t&& for dir in \t\t\"$APACHE_LOCK_DIR\" \t\t\"$APACHE_RUN_DIR\" \t\t\"$APACHE_LOG_DIR\" \t\t/var/www/html \t; do \t\trm -rvf \"$dir\" \t\t&& mkdir -p \"$dir\" \t\t&& chown -R \"$APACHE_RUN_USER:$APACHE_RUN_GROUP\" \"$dir\"; \tdone"
+                        },
+                        {
+                            "name": "index",
+                            "value": "5"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:8720c2d512e3ceb8ec9886b498117fcf8b4669082a6093e5cf868b632e555c44?index=6&ID=c3778068da135c48",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:8720c2d512e3ceb8ec9886b498117fcf8b4669082a6093e5cf868b632e555c44",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "8720c2d512e3ceb8ec9886b498117fcf8b4669082a6093e5cf868b632e555c44"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:8720c2d512e3ceb8ec9886b498117fcf8b4669082a6093e5cf868b632e555c44?index=6",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "0"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "a2dismod mpm_event && a2enmod mpm_prefork"
+                        },
+                        {
+                            "name": "index",
+                            "value": "6"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:1173f82cf0751cd6e6ef41801c6f6bac2ef2e34d5fdc9c25d84bfd1626e443ad?index=7&ID=c38b2a0f32be73f5",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:1173f82cf0751cd6e6ef41801c6f6bac2ef2e34d5fdc9c25d84bfd1626e443ad",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "1173f82cf0751cd6e6ef41801c6f6bac2ef2e34d5fdc9c25d84bfd1626e443ad"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:1173f82cf0751cd6e6ef41801c6f6bac2ef2e34d5fdc9c25d84bfd1626e443ad?index=7",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "0"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -ex \t&& . \"$APACHE_ENVVARS\" \t&& ln -sfT /dev/stderr \"$APACHE_LOG_DIR/error.log\" \t&& ln -sfT /dev/stdout \"$APACHE_LOG_DIR/access.log\" \t&& ln -sfT /dev/stdout \"$APACHE_LOG_DIR/other_vhosts_access.log\""
+                        },
+                        {
+                            "name": "index",
+                            "value": "7"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:5e3bed7e2d2b1d1d434320cf1bdbc085c8ea6a87a4c3c765e48489d120fccf43?index=8&ID=aaef86edc6d12199",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:5e3bed7e2d2b1d1d434320cf1bdbc085c8ea6a87a4c3c765e48489d120fccf43",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "5e3bed7e2d2b1d1d434320cf1bdbc085c8ea6a87a4c3c765e48489d120fccf43"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:5e3bed7e2d2b1d1d434320cf1bdbc085c8ea6a87a4c3c765e48489d120fccf43?index=8",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "204"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "{ \t\techo '<FilesMatch \\.php$>'; \t\techo '\\tSetHandler application/x-httpd-php'; \t\techo '</FilesMatch>'; \t\techo; \t\techo 'DirectoryIndex disabled'; \t\techo 'DirectoryIndex index.php index.html'; \t\techo; \t\techo '<Directory /var/www/>'; \t\techo '\\tOptions -Indexes'; \t\techo '\\tAllowOverride All'; \t\techo '</Directory>'; \t} | tee \"$APACHE_CONFDIR/conf-available/docker-php.conf\" \t&& a2enconf docker-php"
+                        },
+                        {
+                            "name": "index",
+                            "value": "8"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:3d853caefc79d0001e2816a07d2595280ae3716e8edf1ce1c0ee9afe8cfa3317?index=9&ID=2bc538e475f3f3c2",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:3d853caefc79d0001e2816a07d2595280ae3716e8edf1ce1c0ee9afe8cfa3317",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "3d853caefc79d0001e2816a07d2595280ae3716e8edf1ce1c0ee9afe8cfa3317"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:3d853caefc79d0001e2816a07d2595280ae3716e8edf1ce1c0ee9afe8cfa3317?index=9",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "13330278"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -xe; \t\tfetchDeps=' \t\twget \t'; \tif ! command -v gpg > /dev/null; then \t\tfetchDeps=\"$fetchDeps \t\t\tdirmngr \t\t\tgnupg \t\t\"; \tfi; \tapt-get update; \tapt-get install -y --no-install-recommends $fetchDeps; \trm -rf /var/lib/apt/lists/*; \t\tmkdir -p /usr/src; \tcd /usr/src; \t\twget -O php.tar.xz \"$PHP_URL\"; \t\tif [ -n \"$PHP_SHA256\" ]; then \t\techo \"$PHP_SHA256 *php.tar.xz\" | sha256sum -c -; \tfi; \tif [ -n \"$PHP_MD5\" ]; then \t\techo \"$PHP_MD5 *php.tar.xz\" | md5sum -c -; \tfi; \t\tif [ -n \"$PHP_ASC_URL\" ]; then \t\twget -O php.tar.xz.asc \"$PHP_ASC_URL\"; \t\texport GNUPGHOME=\"$(mktemp -d)\"; \t\tfor key in $GPG_KEYS; do \t\t\tgpg --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"; \t\tdone; \t\tgpg --batch --verify php.tar.xz.asc php.tar.xz; \t\trm -rf \"$GNUPGHOME\"; \tfi; \t\tapt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps"
+                        },
+                        {
+                            "name": "index",
+                            "value": "9"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:2c6d7f8675fdfdb711f4029a7e59d0399444f79cbbac215563a5831ebbcd9e8b?index=10&ID=6d3bd423b19c2d18",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:2c6d7f8675fdfdb711f4029a7e59d0399444f79cbbac215563a5831ebbcd9e8b",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "2c6d7f8675fdfdb711f4029a7e59d0399444f79cbbac215563a5831ebbcd9e8b"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:2c6d7f8675fdfdb711f4029a7e59d0399444f79cbbac215563a5831ebbcd9e8b?index=10",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "587"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:207c686e3fed4f71f8a7b245d8dcae9c9048d276a326d82b553c12a90af0c0ca in /usr/local/bin/ "
+                        },
+                        {
+                            "name": "index",
+                            "value": "10"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:69899e54d2c37976baae8c8cd323c234fc15f31fedda54e80e92965d7a2f066b?index=11&ID=7e06bb597c971261",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:69899e54d2c37976baae8c8cd323c234fc15f31fedda54e80e92965d7a2f066b",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "69899e54d2c37976baae8c8cd323c234fc15f31fedda54e80e92965d7a2f066b"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:69899e54d2c37976baae8c8cd323c234fc15f31fedda54e80e92965d7a2f066b?index=11",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "53770760"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -eux; \t\tsavedAptMark=\"$(apt-mark showmanual)\"; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tlibargon2-0-dev \t\tlibcurl4-openssl-dev \t\tlibedit-dev \t\tlibsodium-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibxml2-dev \t\tzlib1g-dev \t\t${PHP_EXTRA_BUILD_DEPS:-} \t; \trm -rf /var/lib/apt/lists/*; \t\texport \t\tCFLAGS=\"$PHP_CFLAGS\" \t\tCPPFLAGS=\"$PHP_CPPFLAGS\" \t\tLDFLAGS=\"$PHP_LDFLAGS\" \t; \tdocker-php-source extract; \tcd /usr/src/php; \tgnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\"; \tdebMultiarch=\"$(dpkg-architecture --query DEB_BUILD_MULTIARCH)\"; \tif [ ! -d /usr/include/curl ]; then \t\tln -sT \"/usr/include/$debMultiarch/curl\" /usr/local/include/curl; \tfi; \t./configure \t\t--build=\"$gnuArch\" \t\t--with-config-file-path=\"$PHP_INI_DIR\" \t\t--with-config-file-scan-dir=\"$PHP_INI_DIR/conf.d\" \t\t\t\t--disable-cgi \t\t\t\t--enable-ftp \t\t--enable-mbstring \t\t--enable-mysqlnd \t\t--with-password-argon2 \t\t--with-sodium \t\t\t\t--with-curl \t\t--with-libedit \t\t--with-openssl \t\t--with-zlib \t\t\t\t$(test \"$gnuArch\" = 's390x-linux-gnu' && echo '--without-pcre-jit') \t\t--with-libdir=\"lib/$debMultiarch\" \t\t\t\t${PHP_EXTRA_CONFIGURE_ARGS:-} \t; \tmake -j \"$(nproc)\"; \tmake install; \tfind /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; \tmake clean; \tcd /; \tdocker-php-source delete; \t\tapt-mark auto '.*' > /dev/null; \t[ -z \"$savedAptMark\" ] || apt-mark manual $savedAptMark; \tfind /usr/local -type f -executable -exec ldd '{}' ';' \t\t| awk '/=>/ { print $(NF-1) }' \t\t| sort -u \t\t| xargs -r dpkg-query --search \t\t| cut -d: -f1 \t\t| sort -u \t\t| xargs -r apt-mark manual \t; \tapt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \t\tphp --version; \t\tpecl update-channels; \trm -rf /tmp/pear ~/.pearrc"
+                        },
+                        {
+                            "name": "index",
+                            "value": "11"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:6fca4e211f7f884593d08b829a1b620c6f9e4a577d98b3d8a79fe4b19d46c41c?index=12&ID=abb8ee95070cebcd",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:6fca4e211f7f884593d08b829a1b620c6f9e4a577d98b3d8a79fe4b19d46c41c",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "6fca4e211f7f884593d08b829a1b620c6f9e4a577d98b3d8a79fe4b19d46c41c"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:6fca4e211f7f884593d08b829a1b620c6f9e4a577d98b3d8a79fe4b19d46c41c?index=12",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "6390"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY multi:cb6c9a453a971f0ed6bdf30b12bc250bbe068005b3c3b084f5048cbf9787fb8d in /usr/local/bin/ "
+                        },
+                        {
+                            "name": "index",
+                            "value": "12"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:d0e93a4045fd86043831f1f6563e372ee4510d91a030d2cb654baf05b521452c?index=13&ID=eef5d18c5a4778e0",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:d0e93a4045fd86043831f1f6563e372ee4510d91a030d2cb654baf05b521452c",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "d0e93a4045fd86043831f1f6563e372ee4510d91a030d2cb654baf05b521452c"
+                        }
+                    ],
+                    "purl": "pkg:layer/./php%40sha256:b4b818f6cdda18c2987c60e6a640a2ed4778e58e8375667c3ceab75ed315fb36%40sha256:07d8c297c2c3720df62365463ee198295c63ce7250e652883afa54eac468d0d3@sha256:d0e93a4045fd86043831f1f6563e372ee4510d91a030d2cb654baf05b521452c?index=13",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "1346"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:24613ecbb1ce6a09f683b0753da9c26a1af07547326e8a02f6eec80ad6f2774a in /usr/local/bin/ "
+                        },
+                        {
+                            "name": "index",
+                            "value": "13"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

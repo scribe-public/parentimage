@@ -1,0 +1,74 @@
+{
+    "50c3cd23142638cd1a726e8d788baa9353907479df6e6501edcee6fa4f7820bad4f0ce9e6abd83b53592862d074b18b0d71c7a7a1975b27240a89ded8240d161": [
+        {
+            "image_metadata": {
+                "repo": "amazoncorretto",
+                "image_tag": "11.0.8-al2",
+                "last_updated": "2020-07-31T23:18:56.386353Z",
+                "tag_last_pushed": "2020-07-31T23:18:56.386353Z",
+                "arch": "amd64",
+                "image_digest": "sha256:f7a7126645e48c54535e36bcae9a7fbeba6fd5fc7dbb0071ce4534cad101616a",
+                "image_status": "active",
+                "image_push_date": null
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:f7a7126645e48c54535e36bcae9a7fbeba6fd5fc7dbb0071ce4534cad101616a%40sha256:0912c541a67af7a4d7879ac81af6a8ee516ee49ba5bc0005d367101b612499f1@sha256:50c3cd23142638cd1a726e8d788baa9353907479df6e6501edcee6fa4f7820ba?index=0&ID=dd408c28f8b6a9d6",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:50c3cd23142638cd1a726e8d788baa9353907479df6e6501edcee6fa4f7820ba",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "50c3cd23142638cd1a726e8d788baa9353907479df6e6501edcee6fa4f7820ba"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:f7a7126645e48c54535e36bcae9a7fbeba6fd5fc7dbb0071ce4534cad101616a%40sha256:0912c541a67af7a4d7879ac81af6a8ee516ee49ba5bc0005d367101b612499f1@sha256:50c3cd23142638cd1a726e8d788baa9353907479df6e6501edcee6fa4f7820ba?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "162736480"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:92220f428664788288d5cda805c94b48f6a5e957d4c7724085f3278d0a864f6d in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:f7a7126645e48c54535e36bcae9a7fbeba6fd5fc7dbb0071ce4534cad101616a%40sha256:0912c541a67af7a4d7879ac81af6a8ee516ee49ba5bc0005d367101b612499f1@sha256:d4f0ce9e6abd83b53592862d074b18b0d71c7a7a1975b27240a89ded8240d161?index=1&ID=d9fd0dc4b4602ffc",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:d4f0ce9e6abd83b53592862d074b18b0d71c7a7a1975b27240a89ded8240d161",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "d4f0ce9e6abd83b53592862d074b18b0d71c7a7a1975b27240a89ded8240d161"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:f7a7126645e48c54535e36bcae9a7fbeba6fd5fc7dbb0071ce4534cad101616a%40sha256:0912c541a67af7a4d7879ac81af6a8ee516ee49ba5bc0005d367101b612499f1@sha256:d4f0ce9e6abd83b53592862d074b18b0d71c7a7a1975b27240a89ded8240d161?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "278876837"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "|1 version=11.0.8.10-1 /bin/sh -c set -eux     && export GNUPGHOME=\"$(mktemp -d)\"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r \"$GNUPGHOME\" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && yum install -y java-11-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-11-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

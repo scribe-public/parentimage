@@ -1,0 +1,186 @@
+{
+    "d6021e78cec686df07fb63344e34e8d948e8975efa0ae5e36db44beecfceaa7bad811fe9ede2db18ba3bcf1f24c59b4fe031e32ad04322c2116650d74e4789505eea61f512c4feddd51e95c6d65b7f4f78d4e07a98c3ecf89a6bd718d329487c33cee10e328c998c3edd46f5150074404ac36fd515ba837bc4798c34c5d2105d87a082ea8ff3614bea74cb669a6452511a3aebcc65349be4bd3b917fb248f9b5cd6a3cc685c7f43306e32ae9f7646ecd91a970f34cc0c4eab7fd2be6a3e45835": [
+        {
+            "image_metadata": {
+                "repo": "buildpack-deps",
+                "image_tag": "16.04-scm",
+                "last_updated": "2022-11-16T11:22:35.952849Z",
+                "tag_last_pushed": "2022-11-16T11:22:35.952849Z",
+                "arch": "arm64",
+                "image_digest": "sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547",
+                "image_status": "active",
+                "image_push_date": "2022-10-25T08:53:23.590527Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:d6021e78cec686df07fb63344e34e8d948e8975efa0ae5e36db44beecfceaa7b?index=0&ID=7514a62528b742ee",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:d6021e78cec686df07fb63344e34e8d948e8975efa0ae5e36db44beecfceaa7b",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "d6021e78cec686df07fb63344e34e8d948e8975efa0ae5e36db44beecfceaa7b"
+                        }
+                    ],
+                    "purl": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:d6021e78cec686df07fb63344e34e8d948e8975efa0ae5e36db44beecfceaa7b?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "119256578"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:3c6dc937cb7b4c81b42126f377d23320ec1d0a8ca34d38e7c45871f1d08dac43 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:ad811fe9ede2db18ba3bcf1f24c59b4fe031e32ad04322c2116650d74e478950?index=1&ID=a10d6f01ab009425",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:ad811fe9ede2db18ba3bcf1f24c59b4fe031e32ad04322c2116650d74e478950",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "ad811fe9ede2db18ba3bcf1f24c59b4fe031e32ad04322c2116650d74e478950"
+                        }
+                    ],
+                    "purl": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:ad811fe9ede2db18ba3bcf1f24c59b4fe031e32ad04322c2116650d74e478950?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "745"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -xe \t\t&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d \t&& echo 'exit 101' >> /usr/sbin/policy-rc.d \t&& chmod +x /usr/sbin/policy-rc.d \t\t&& dpkg-divert --local --rename --add /sbin/initctl \t&& cp -a /usr/sbin/policy-rc.d /sbin/initctl \t&& sed -i 's/^exit.*/exit 0/' /sbin/initctl \t\t&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup \t\t&& echo 'DPkg::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' > /etc/apt/apt.conf.d/docker-clean \t&& echo 'APT::Update::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' >> /etc/apt/apt.conf.d/docker-clean \t&& echo 'Dir::Cache::pkgcache \"\"; Dir::Cache::srcpkgcache \"\";' >> /etc/apt/apt.conf.d/docker-clean \t\t&& echo 'Acquire::Languages \"none\";' > /etc/apt/apt.conf.d/docker-no-languages \t\t&& echo 'Acquire::GzipIndexes \"true\"; Acquire::CompressionTypes::Order:: \"gz\";' > /etc/apt/apt.conf.d/docker-gzip-indexes \t\t&& echo 'Apt::AutoRemove::SuggestsImportant \"false\";' > /etc/apt/apt.conf.d/docker-autoremove-suggests"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:5eea61f512c4feddd51e95c6d65b7f4f78d4e07a98c3ecf89a6bd718d329487c?index=2&ID=76a0bee56029f229",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:5eea61f512c4feddd51e95c6d65b7f4f78d4e07a98c3ecf89a6bd718d329487c",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "5eea61f512c4feddd51e95c6d65b7f4f78d4e07a98c3ecf89a6bd718d329487c"
+                        }
+                    ],
+                    "purl": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:5eea61f512c4feddd51e95c6d65b7f4f78d4e07a98c3ecf89a6bd718d329487c?index=2",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "0"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "rm -rf /var/lib/apt/lists/*"
+                        },
+                        {
+                            "name": "index",
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:33cee10e328c998c3edd46f5150074404ac36fd515ba837bc4798c34c5d2105d?index=3&ID=84bca6be95359d5e",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:33cee10e328c998c3edd46f5150074404ac36fd515ba837bc4798c34c5d2105d",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "33cee10e328c998c3edd46f5150074404ac36fd515ba837bc4798c34c5d2105d"
+                        }
+                    ],
+                    "purl": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:33cee10e328c998c3edd46f5150074404ac36fd515ba837bc4798c34c5d2105d?index=3",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "7"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "mkdir -p /run/systemd && echo 'docker' > /run/systemd/container"
+                        },
+                        {
+                            "name": "index",
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:87a082ea8ff3614bea74cb669a6452511a3aebcc65349be4bd3b917fb248f9b5?index=4&ID=bf4fd87d1435cb3c",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:87a082ea8ff3614bea74cb669a6452511a3aebcc65349be4bd3b917fb248f9b5",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "87a082ea8ff3614bea74cb669a6452511a3aebcc65349be4bd3b917fb248f9b5"
+                        }
+                    ],
+                    "purl": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:87a082ea8ff3614bea74cb669a6452511a3aebcc65349be4bd3b917fb248f9b5?index=4",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "16374787"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -eux; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tapt-transport-https \t\tca-certificates \t\tcurl \t\tnetbase \t\twget \t\ttzdata \t; \trm -rf /var/lib/apt/lists/*"
+                        },
+                        {
+                            "name": "index",
+                            "value": "4"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:cd6a3cc685c7f43306e32ae9f7646ecd91a970f34cc0c4eab7fd2be6a3e45835?index=5&ID=883b7ec28edfa305",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:cd6a3cc685c7f43306e32ae9f7646ecd91a970f34cc0c4eab7fd2be6a3e45835",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "cd6a3cc685c7f43306e32ae9f7646ecd91a970f34cc0c4eab7fd2be6a3e45835"
+                        }
+                    ],
+                    "purl": "pkg:layer/./buildpack-deps%40sha256:d02144ab71a36dd5357661276ef23395a32022382a53294d6681cfd442327547%40sha256:067fd097536acda8a5a5cc26b969443e4a156dc464664ce5692a72466ca48caa@sha256:cd6a3cc685c7f43306e32ae9f7646ecd91a970f34cc0c4eab7fd2be6a3e45835?index=5",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "118654918"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "apt-get update && apt-get install -y --no-install-recommends \t\tbzr \t\tgit \t\tmercurial \t\topenssh-client \t\tsubversion \t\t\t\tprocps \t&& rm -rf /var/lib/apt/lists/*"
+                        },
+                        {
+                            "name": "index",
+                            "value": "5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

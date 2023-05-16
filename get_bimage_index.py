@@ -8,6 +8,8 @@ import subprocess
 import sys
 import time
 
+from dirToIndex import getIndexDataFiles, generateNewIndexDict
+
 from functools import cmp_to_key
 from datetime import datetime
 
@@ -118,34 +120,68 @@ def compare_layer(item1, item2):
     return 0
 
 
-def add_image_layer_index(image_layer_filename, image_info, image_index_filename):
+def add_image_layer_index(args, image_layer_filename, image_info, image_index_filename, index_dir_paths):
     image_layer_info = get_json(image_layer_filename)
     if image_layer_info == None:
         log.error("image layer file error on file {}".format(image_layer_filename))
         return False
+    
+    if args.small_index:
+        image_index = get_json(image_index_filename)
+        if image_index == None:
+            image_index = {}
 
-    image_index = get_json(image_index_filename)
-    if image_index == None:
-        image_index = {}
+        id = ""
+        for l in image_layer_info["image_layers"]:
+            id += l["hashes"][0]["content"]
 
-    id = ""
-    for l in image_layer_info["image_layers"]:
-        id += l["hashes"][0]["content"]
+        small_data = {"repo": image_info['repo'], "image_tag": image_info['image_tag']}
 
-    image_data = {}
-    image_data["image_metadata"] = image_info
-    image_data["image_layers"] = image_layer_info["image_layers"]
-
-    if id in image_index:
-        for im in image_index[id]:
-            if im["image_metadata"]["image_digest"] == image_info["image_digest"]:
-                break
+        if id in image_index:
+            for im in image_index[id]:
+                if im['repo'] == image_info['repo'] and im['image_tag'] == image_info["image_tag"]:
+                # if im["image_metadata"]["image_digest"] == image_info["image_digest"]:
+                    break
+            else:
+                image_index[id].append(small_data)
         else:
-            image_index[id].append(image_data)
+            image_index[id] = [small_data]
+        write_json(image_index_filename, image_index)
     else:
-        image_index[id] = [image_data]
+        id = ""
+        for l in image_layer_info["image_layers"]:
+            id += l["hashes"][0]["content"]
 
-    write_json(image_index_filename, image_index)
+        image_data = {}
+        image_data["image_metadata"] = image_info
+        image_data["image_layers"] = image_layer_info["image_layers"]
+
+        foundFile = False
+        for file in index_dir_paths:
+            if foundFile: break
+            file_cont = get_json(file)
+            if id in file_cont:
+                for im in file_cont[id]:
+                    if im["image_metadata"]["image_digest"] == image_info["image_digest"]:
+                        foundFile = True
+                        break
+                else: 
+                    foundFile = True
+                    file_cont[id].append(image_data)
+                    break
+        if not foundFile:
+            folder = 'IndexData/' + image_info['repo'] + '-' + image_info['arch']
+            imgDig = image_info['image_digest']
+            imgDig = imgDig[7:]
+            fileName = folder + '/' + image_info['repo'] + '@' + imgDig + '.json'
+            if not os.path.exists(folder):
+                os.mkdir(folder)
+            digest = ''
+            for layer in image_data['image_layers']:
+                digest += layer['hashes'][0]['content']
+            image_data_reform = {digest:[image_data]}
+            write_json(fileName, image_data_reform)
+            
     return True
 
 
@@ -191,8 +227,9 @@ def get_product_image_list(product):
     repo_image_cache.flush()
 
 
-def download_image_data(product):
+def download_image_data(args, product):
     global image_index_filename
+    index_dir_paths = getIndexDataFiles()
     repo = product["repo"]
     # Get images to download list
     path_prefix = repo + '-' + product["arch"] + f'/'
@@ -232,7 +269,7 @@ def download_image_data(product):
                 add_to_cache = False
                 if gensbom_image(docker_image_name, gensbom_filename):
                     if get_image_layer_info(gensbom_filename, image_layer_filename):
-                        if add_image_layer_index(image_layer_filename, value, image_index_filename):
+                        if add_image_layer_index(args, image_layer_filename, value, image_index_filename, index_dir_paths):
                             value["index_status"] = "success"
                             add_to_cache = True
                         else:
@@ -272,7 +309,7 @@ def main(args):
     for product in products:
         log.info("Handling product:\n{}".format(product))
         get_product_image_list(product)
-        download_image_data(product)
+        download_image_data(args, product)
 
 
 if __name__ == "__main__":
@@ -296,6 +333,7 @@ if __name__ == "__main__":
     parser.add_argument('--product_list', type=str, default="product_list.json", required=False)
     parser.add_argument('--image_index', type=str, default="image_index.json", required=False)
     parser.add_argument('--erase_index', action='store_true')
+    parser.add_argument('--small_index', action='store_true')
     args = parser.parse_args()
     main(args)
 

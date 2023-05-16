@@ -1,0 +1,74 @@
+{
+    "531743b7098cb2aaf615641007a129173f63ed86ca32fe7b5a246a1c47286028f199ad476e127b551892264e2437545e7a1539729b7d9ba1377d674e4d68b323": [
+        {
+            "image_metadata": {
+                "repo": "openjdk",
+                "image_tag": "14-jdk-alpine3.10",
+                "last_updated": "2020-01-28T01:24:56.856442Z",
+                "tag_last_pushed": "2020-01-28T01:24:56.856442Z",
+                "arch": "amd64",
+                "image_digest": "sha256:7c29ddf86e7fc5ea5fe01e1ad3e3439422fc50dc2c568b00d6bd79bdb026bfdf",
+                "image_status": "active",
+                "image_push_date": null
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./openjdk%40sha256:7c29ddf86e7fc5ea5fe01e1ad3e3439422fc50dc2c568b00d6bd79bdb026bfdf%40sha256:8273876b08aa52f215e5f471799f2f8c931db245772d2c55ebb3767c32e80a90@sha256:531743b7098cb2aaf615641007a129173f63ed86ca32fe7b5a246a1c47286028?index=0&ID=b260e78a87e7741d",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:531743b7098cb2aaf615641007a129173f63ed86ca32fe7b5a246a1c47286028",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "531743b7098cb2aaf615641007a129173f63ed86ca32fe7b5a246a1c47286028"
+                        }
+                    ],
+                    "purl": "pkg:layer/./openjdk%40sha256:7c29ddf86e7fc5ea5fe01e1ad3e3439422fc50dc2c568b00d6bd79bdb026bfdf%40sha256:8273876b08aa52f215e5f471799f2f8c931db245772d2c55ebb3767c32e80a90@sha256:531743b7098cb2aaf615641007a129173f63ed86ca32fe7b5a246a1c47286028?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "5552525"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:d48cac34fac385cbc1de6adfdd88300f76f9bbe346cd17e64fd834d042a98326 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./openjdk%40sha256:7c29ddf86e7fc5ea5fe01e1ad3e3439422fc50dc2c568b00d6bd79bdb026bfdf%40sha256:8273876b08aa52f215e5f471799f2f8c931db245772d2c55ebb3767c32e80a90@sha256:f199ad476e127b551892264e2437545e7a1539729b7d9ba1377d674e4d68b323?index=1&ID=20c8aa42188899e6",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:f199ad476e127b551892264e2437545e7a1539729b7d9ba1377d674e4d68b323",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "f199ad476e127b551892264e2437545e7a1539729b7d9ba1377d674e4d68b323"
+                        }
+                    ],
+                    "purl": "pkg:layer/./openjdk%40sha256:7c29ddf86e7fc5ea5fe01e1ad3e3439422fc50dc2c568b00d6bd79bdb026bfdf%40sha256:8273876b08aa52f215e5f471799f2f8c931db245772d2c55ebb3767c32e80a90@sha256:f199ad476e127b551892264e2437545e7a1539729b7d9ba1377d674e4d68b323?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "334859367"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -eux; \t\twget -O /openjdk.tgz \"$JAVA_URL\"; \techo \"$JAVA_SHA256 */openjdk.tgz\" | sha256sum -c -; \tmkdir -p \"$JAVA_HOME\"; \ttar --extract --file /openjdk.tgz --directory \"$JAVA_HOME\" --strip-components 1; \trm /openjdk.tgz; \t\tjava -Xshare:dump; \t\tjava --version; \tjavac --version"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

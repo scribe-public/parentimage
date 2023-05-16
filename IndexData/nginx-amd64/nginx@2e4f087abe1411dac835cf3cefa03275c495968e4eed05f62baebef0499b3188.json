@@ -1,0 +1,74 @@
+{
+    "f1b5933fe4b5f49bbe8258745cf396afe07e625bdab3168e364daf7c956b6b81f9ccce8ea10df7ef59bbd3d2b914f1490e5e2c1eb12372ddbb488973510f7c6f": [
+        {
+            "image_metadata": {
+                "repo": "nginx",
+                "image_tag": "1.16.0-alpine-perl",
+                "last_updated": "2019-06-20T02:46:17.47085Z",
+                "tag_last_pushed": "2019-06-20T02:46:17.47085Z",
+                "arch": "amd64",
+                "image_digest": "sha256:2e4f087abe1411dac835cf3cefa03275c495968e4eed05f62baebef0499b3188",
+                "image_status": "active",
+                "image_push_date": null
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:2e4f087abe1411dac835cf3cefa03275c495968e4eed05f62baebef0499b3188%40sha256:dfe32420dd8c6c338018a6f4c11a03c14ebaec64e4bfecf68418b2160bd06c90@sha256:f1b5933fe4b5f49bbe8258745cf396afe07e625bdab3168e364daf7c956b6b81?index=0&ID=1407186e54d43110",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:f1b5933fe4b5f49bbe8258745cf396afe07e625bdab3168e364daf7c956b6b81",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "f1b5933fe4b5f49bbe8258745cf396afe07e625bdab3168e364daf7c956b6b81"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:2e4f087abe1411dac835cf3cefa03275c495968e4eed05f62baebef0499b3188%40sha256:dfe32420dd8c6c338018a6f4c11a03c14ebaec64e4bfecf68418b2160bd06c90@sha256:f1b5933fe4b5f49bbe8258745cf396afe07e625bdab3168e364daf7c956b6b81?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "5528857"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:a86aea1f3a7d68f6ae03397b99ea77f2e9ee901c5c59e59f76f93adbb4035913 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:2e4f087abe1411dac835cf3cefa03275c495968e4eed05f62baebef0499b3188%40sha256:dfe32420dd8c6c338018a6f4c11a03c14ebaec64e4bfecf68418b2160bd06c90@sha256:f9ccce8ea10df7ef59bbd3d2b914f1490e5e2c1eb12372ddbb488973510f7c6f?index=1&ID=887f19fbfdbcf500",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:f9ccce8ea10df7ef59bbd3d2b914f1490e5e2c1eb12372ddbb488973510f7c6f",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "f9ccce8ea10df7ef59bbd3d2b914f1490e5e2c1eb12372ddbb488973510f7c6f"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:2e4f087abe1411dac835cf3cefa03275c495968e4eed05f62baebef0499b3188%40sha256:dfe32420dd8c6c338018a6f4c11a03c14ebaec64e4bfecf68418b2160bd06c90@sha256:f9ccce8ea10df7ef59bbd3d2b914f1490e5e2c1eb12372ddbb488973510f7c6f?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "49163951"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -x     && apkArch=\"$(cat /etc/apk/arch)\"     && nginxPackages=\"         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     \"     && case \"$apkArch\" in         x86_64)             set -x             && KEY_SHA512=\"e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin\"             && apk add --no-cache --virtual .cert-deps                 openssl curl ca-certificates             && curl -o /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ \"$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)\" = \"$KEY_SHA512\" ]; then                  echo \"key verification succeeded!\";                  mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;                else                  echo \"key verification failed!\";                  exit 1;                fi             && printf \"%s%s%s\\n\"                 \"http://nginx.org/packages/alpine/v\"                 `egrep -o '^[0-9]+\\.[0-9]+' /etc/alpine-release`                 \"/main\"             | tee -a /etc/apk/repositories             && apk del .cert-deps             ;;         *)             set -x             && tempDir=\"$(mktemp -d)\"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 mercurial                 bash                 alpine-sdk                 findutils             && su - nobody -s /bin/sh -c \"                 export HOME=${tempDir}                 && cd ${tempDir}                 && hg clone https://hg.nginx.org/pkg-oss                 && cd pkg-oss                 && hg up ${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 \"             && echo \"${tempDir}/packages/alpine/\" >> /etc/apk/repositories             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             ;;     esac     && apk add --no-cache $nginxPackages     && if [ -n \"$tempDir\" ]; then rm -rf \"$tempDir\"; fi     && if [ -n \"/etc/apk/keys/abuild-key.rsa.pub\" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n \"/etc/apk/keys/nginx_signing.rsa.pub\" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && sed -i '$ d' /etc/apk/repositories     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps=\"$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, \"\\nso:\", $2); print \"so:\" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )\"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

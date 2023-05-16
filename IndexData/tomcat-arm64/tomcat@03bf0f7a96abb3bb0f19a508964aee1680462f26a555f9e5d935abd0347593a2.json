@@ -1,0 +1,242 @@
+{
+    "d3bcb0cf52ca31ae8729ac07133bfd80b6ae1ab9e45e1dc9e2fd909680b0ac16ce5caa3da54ab8b03f989e4c0a05cddd18179430cca45813360cbc00d605ff7872eceadfe843d633a5ad6241a46e88ffba60bcabf0530f75584f1718be7b80950ce9fc45bb81fd27310beda9f126d7ae893da73102e3fecb4a1e51b1302c57cbbdad6432f5d66a3a476d69e5c9a3ad9c7d63bde2b0cea8c219d1a3161df8eb67d3aab79b5492475e4b2b40251efa80e8f8d7c9bd7ca40037ec9cb7cb5e6199033d99b027506232eecafce78c76a5411445541ec8ec8f48855a616d09c7b3457b2f2638a54f0b9513925d879f1001aad586704ee182da35d7a7895c9e934a3f80": [
+        {
+            "image_metadata": {
+                "repo": "tomcat",
+                "image_tag": "7.0.105-jdk8-adoptopenjdk-hotspot",
+                "last_updated": "2020-09-18T03:20:52.573946Z",
+                "tag_last_pushed": "2020-09-18T03:20:52.573946Z",
+                "arch": "arm64",
+                "image_digest": "sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2",
+                "image_status": "active",
+                "image_push_date": "2020-09-18T03:20:31.41751Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:d3bcb0cf52ca31ae8729ac07133bfd80b6ae1ab9e45e1dc9e2fd909680b0ac16?index=0&ID=21771fb7d264b249",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:d3bcb0cf52ca31ae8729ac07133bfd80b6ae1ab9e45e1dc9e2fd909680b0ac16",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "d3bcb0cf52ca31ae8729ac07133bfd80b6ae1ab9e45e1dc9e2fd909680b0ac16"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:d3bcb0cf52ca31ae8729ac07133bfd80b6ae1ab9e45e1dc9e2fd909680b0ac16?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "56736675"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:9eedc88c2028d53a81210b52c98121dddea7e30ecfbd4d11d2a1b2bdc94a0102 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:ce5caa3da54ab8b03f989e4c0a05cddd18179430cca45813360cbc00d605ff78?index=1&ID=a4a2a2a48ff5283e",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:ce5caa3da54ab8b03f989e4c0a05cddd18179430cca45813360cbc00d605ff78",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "ce5caa3da54ab8b03f989e4c0a05cddd18179430cca45813360cbc00d605ff78"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:ce5caa3da54ab8b03f989e4c0a05cddd18179430cca45813360cbc00d605ff78?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "745"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -xe \t\t&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d \t&& echo 'exit 101' >> /usr/sbin/policy-rc.d \t&& chmod +x /usr/sbin/policy-rc.d \t\t&& dpkg-divert --local --rename --add /sbin/initctl \t&& cp -a /usr/sbin/policy-rc.d /sbin/initctl \t&& sed -i 's/^exit.*/exit 0/' /sbin/initctl \t\t&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup \t\t&& echo 'DPkg::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' > /etc/apt/apt.conf.d/docker-clean \t&& echo 'APT::Update::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' >> /etc/apt/apt.conf.d/docker-clean \t&& echo 'Dir::Cache::pkgcache \"\"; Dir::Cache::srcpkgcache \"\";' >> /etc/apt/apt.conf.d/docker-clean \t\t&& echo 'Acquire::Languages \"none\";' > /etc/apt/apt.conf.d/docker-no-languages \t\t&& echo 'Acquire::GzipIndexes \"true\"; Acquire::CompressionTypes::Order:: \"gz\";' > /etc/apt/apt.conf.d/docker-gzip-indexes \t\t&& echo 'Apt::AutoRemove::SuggestsImportant \"false\";' > /etc/apt/apt.conf.d/docker-autoremove-suggests"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:72eceadfe843d633a5ad6241a46e88ffba60bcabf0530f75584f1718be7b8095?index=2&ID=8ddc9c672543f5e2",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:72eceadfe843d633a5ad6241a46e88ffba60bcabf0530f75584f1718be7b8095",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "72eceadfe843d633a5ad6241a46e88ffba60bcabf0530f75584f1718be7b8095"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:72eceadfe843d633a5ad6241a46e88ffba60bcabf0530f75584f1718be7b8095?index=2",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "7"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "mkdir -p /run/systemd && echo 'docker' > /run/systemd/container"
+                        },
+                        {
+                            "name": "index",
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:0ce9fc45bb81fd27310beda9f126d7ae893da73102e3fecb4a1e51b1302c57cb?index=3&ID=e6cf05d61f9b2379",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:0ce9fc45bb81fd27310beda9f126d7ae893da73102e3fecb4a1e51b1302c57cb",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "0ce9fc45bb81fd27310beda9f126d7ae893da73102e3fecb4a1e51b1302c57cb"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:0ce9fc45bb81fd27310beda9f126d7ae893da73102e3fecb4a1e51b1302c57cb?index=3",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "33938679"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "apt-get update     && apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo \"en_US.UTF-8 UTF-8\" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*"
+                        },
+                        {
+                            "name": "index",
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:bdad6432f5d66a3a476d69e5c9a3ad9c7d63bde2b0cea8c219d1a3161df8eb67?index=4&ID=57eefeaa9b24966a",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:bdad6432f5d66a3a476d69e5c9a3ad9c7d63bde2b0cea8c219d1a3161df8eb67",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "bdad6432f5d66a3a476d69e5c9a3ad9c7d63bde2b0cea8c219d1a3161df8eb67"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:bdad6432f5d66a3a476d69e5c9a3ad9c7d63bde2b0cea8c219d1a3161df8eb67?index=4",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "209101724"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -eux;     ARCH=\"$(dpkg --print-architecture)\";     case \"${ARCH}\" in        aarch64|arm64)          ESUM='7be0b2a4c749a277302a54b456624c076b3a5b990ad502e2a72d803ab31aecab';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jdk_aarch64_linux_hotspot_8u262b10.tar.gz';          ;;        armhf|armv7l)          ESUM='dd85ebb9a64916b4b621a23729e3360adb363d430bf1e99e98f25397834d74bd';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jdk_arm_linux_hotspot_8u262b10.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='d2a16915fb85ba851145c91cda5666cb78f06bf4713a2b3bdce813779ff972c2';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u262b10.tar.gz';          ;;        s390x)          ESUM='a504af6924a095cfb6c392653dccd7299925048c91b399d05efa95a094820120';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jdk_s390x_linux_hotspot_8u262b10.tar.gz';          ;;        amd64|x86_64)          ESUM='733755fd649fad6ae91fc083f7e5a5a0b56410fb6ac1815cff29f744b128b1b1';          BINARY_URL='https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u262-b10/OpenJDK8U-jdk_x64_linux_hotspot_8u262b10.tar.gz';          ;;        *)          echo \"Unsupported arch: ${ARCH}\";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo \"${ESUM} */tmp/openjdk.tar.gz\" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;"
+                        },
+                        {
+                            "name": "index",
+                            "value": "4"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:d3aab79b5492475e4b2b40251efa80e8f8d7c9bd7ca40037ec9cb7cb5e619903?index=5&ID=6c9b29575d04d1f2",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:d3aab79b5492475e4b2b40251efa80e8f8d7c9bd7ca40037ec9cb7cb5e619903",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "d3aab79b5492475e4b2b40251efa80e8f8d7c9bd7ca40037ec9cb7cb5e619903"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:d3aab79b5492475e4b2b40251efa80e8f8d7c9bd7ca40037ec9cb7cb5e619903?index=5",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "0"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "mkdir -p \"$CATALINA_HOME\""
+                        },
+                        {
+                            "name": "index",
+                            "value": "5"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:3d99b027506232eecafce78c76a5411445541ec8ec8f48855a616d09c7b3457b?index=6&ID=34cb4e234b112fcf",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:3d99b027506232eecafce78c76a5411445541ec8ec8f48855a616d09c7b3457b",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "3d99b027506232eecafce78c76a5411445541ec8ec8f48855a616d09c7b3457b"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:3d99b027506232eecafce78c76a5411445541ec8ec8f48855a616d09c7b3457b?index=6",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "19662483"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -eux; \t\tsavedAptMark=\"$(apt-mark showmanual)\"; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tgnupg dirmngr \t\twget ca-certificates \t; \t\tddist() { \t\tlocal f=\"$1\"; shift; \t\tlocal distFile=\"$1\"; shift; \t\tlocal mvnFile=\"${1:-}\"; \t\tlocal success=; \t\tlocal distUrl=; \t\tfor distUrl in \t\t\t\"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile\" \t\t\t\"https://www-us.apache.org/dist/$distFile\" \t\t\t\"https://www.apache.org/dist/$distFile\" \t\t\t\"https://archive.apache.org/dist/$distFile\" \t\t\t${mvnFile:+\"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile\"} \t\t; do \t\t\tif wget -O \"$f\" \"$distUrl\" && [ -s \"$f\" ]; then \t\t\t\tsuccess=1; \t\t\t\tbreak; \t\t\tfi; \t\tdone; \t\t[ -n \"$success\" ]; \t}; \t\tddist 'tomcat.tar.gz' \"tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz\" \"$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz\"; \techo \"$TOMCAT_SHA512 *tomcat.tar.gz\" | sha512sum --strict --check -; \tddist 'tomcat.tar.gz.asc' \"tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc\" \"$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc\"; \texport GNUPGHOME=\"$(mktemp -d)\"; \tfor key in $GPG_KEYS; do \t\tgpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys \"$key\"; \tdone; \tgpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; \ttar -xf tomcat.tar.gz --strip-components=1; \trm bin/*.bat; \trm tomcat.tar.gz*; \tcommand -v gpgconf && gpgconf --kill all || :; \trm -rf \"$GNUPGHOME\"; \t\tmv webapps webapps.dist; \tmkdir webapps; \t\tnativeBuildDir=\"$(mktemp -d)\"; \ttar -xf bin/tomcat-native.tar.gz -C \"$nativeBuildDir\" --strip-components=1; \tapt-get install -y --no-install-recommends \t\tdpkg-dev \t\tgcc \t\tlibapr1-dev \t\tlibssl-dev \t\tmake \t; \t( \t\texport CATALINA_HOME=\"$PWD\"; \t\tcd \"$nativeBuildDir/native\"; \t\tgnuArch=\"$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)\"; \t\taprConfig=\"$(command -v apr-1-config)\"; \t\t./configure \t\t\t--build=\"$gnuArch\" \t\t\t--libdir=\"$TOMCAT_NATIVE_LIBDIR\" \t\t\t--prefix=\"$CATALINA_HOME\" \t\t\t--with-apr=\"$aprConfig\" \t\t\t--with-java-home=\"$JAVA_HOME\" \t\t\t--with-ssl=yes; \t\tmake -j \"$(nproc)\"; \t\tmake install; \t); \trm -rf \"$nativeBuildDir\"; \trm bin/tomcat-native.tar.gz; \t\tapt-mark auto '.*' > /dev/null; \t[ -z \"$savedAptMark\" ] || apt-mark manual $savedAptMark > /dev/null; \tfind \"$TOMCAT_NATIVE_LIBDIR\" -type f -executable -exec ldd '{}' ';' \t\t| awk '/=>/ { print $(NF-1) }' \t\t| sort -u \t\t| xargs -r dpkg-query --search \t\t| cut -d: -f1 \t\t| sort -u \t\t| xargs -r apt-mark manual \t; \tapt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \trm -rf /var/lib/apt/lists/*; \t\tfind ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; \t\tchmod -R +rX .; \tchmod 777 logs temp work"
+                        },
+                        {
+                            "name": "index",
+                            "value": "6"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:2f2638a54f0b9513925d879f1001aad586704ee182da35d7a7895c9e934a3f80?index=7&ID=42795eefd1472fc4",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:2f2638a54f0b9513925d879f1001aad586704ee182da35d7a7895c9e934a3f80",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "2f2638a54f0b9513925d879f1001aad586704ee182da35d7a7895c9e934a3f80"
+                        }
+                    ],
+                    "purl": "pkg:layer/./tomcat%40sha256:03bf0f7a96abb3bb0f19a508964aee1680462f26a555f9e5d935abd0347593a2%40sha256:24b50d7b311aaa21fb290c26f40a3087b614a76290784b178be4da702a9d8670@sha256:2f2638a54f0b9513925d879f1001aad586704ee182da35d7a7895c9e934a3f80?index=7",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "0"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -e \t&& nativeLines=\"$(catalina.sh configtest 2>&1)\" \t&& nativeLines=\"$(echo \"$nativeLines\" | grep 'Apache Tomcat Native')\" \t&& nativeLines=\"$(echo \"$nativeLines\" | sort -u)\" \t&& if ! echo \"$nativeLines\" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then \t\techo >&2 \"$nativeLines\"; \t\texit 1; \tfi"
+                        },
+                        {
+                            "name": "index",
+                            "value": "7"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

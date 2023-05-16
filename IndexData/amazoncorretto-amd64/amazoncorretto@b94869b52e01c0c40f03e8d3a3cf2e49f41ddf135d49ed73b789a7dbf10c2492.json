@@ -1,0 +1,74 @@
+{
+    "777b2c648970480f50f5b4d0af8f9a8ea798eea43dbcf40ce4a8c7118736bdcfda01a20847074643911ed9345ce51a9b99140432219190ca44284b1377efd4be": [
+        {
+            "image_metadata": {
+                "repo": "amazoncorretto",
+                "image_tag": "8u275-alpine-jre",
+                "last_updated": "2020-12-17T01:09:57.187758Z",
+                "tag_last_pushed": "2020-12-17T01:09:57.187758Z",
+                "arch": "amd64",
+                "image_digest": "sha256:b94869b52e01c0c40f03e8d3a3cf2e49f41ddf135d49ed73b789a7dbf10c2492",
+                "image_status": "active",
+                "image_push_date": "2020-12-17T01:09:43.613241Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:b94869b52e01c0c40f03e8d3a3cf2e49f41ddf135d49ed73b789a7dbf10c2492%40sha256:4d9156cb8de3e445ab055fb847efe67434f3ce8e41f815a60837d8306ab2a853@sha256:777b2c648970480f50f5b4d0af8f9a8ea798eea43dbcf40ce4a8c7118736bdcf?index=0&ID=3120b5a4306951f8",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:777b2c648970480f50f5b4d0af8f9a8ea798eea43dbcf40ce4a8c7118736bdcf",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "777b2c648970480f50f5b4d0af8f9a8ea798eea43dbcf40ce4a8c7118736bdcf"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:b94869b52e01c0c40f03e8d3a3cf2e49f41ddf135d49ed73b789a7dbf10c2492%40sha256:4d9156cb8de3e445ab055fb847efe67434f3ce8e41f815a60837d8306ab2a853@sha256:777b2c648970480f50f5b4d0af8f9a8ea798eea43dbcf40ce4a8c7118736bdcf?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "5572926"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:ec475c2abb2d46435286b5ae5efacf5b50b1a9e3b6293b69db3c0172b5b9658b in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:b94869b52e01c0c40f03e8d3a3cf2e49f41ddf135d49ed73b789a7dbf10c2492%40sha256:4d9156cb8de3e445ab055fb847efe67434f3ce8e41f815a60837d8306ab2a853@sha256:da01a20847074643911ed9345ce51a9b99140432219190ca44284b1377efd4be?index=1&ID=856de693a4b97815",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:da01a20847074643911ed9345ce51a9b99140432219190ca44284b1377efd4be",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "da01a20847074643911ed9345ce51a9b99140432219190ca44284b1377efd4be"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:b94869b52e01c0c40f03e8d3a3cf2e49f41ddf135d49ed73b789a7dbf10c2492%40sha256:4d9156cb8de3e445ab055fb847efe67434f3ce8e41f815a60837d8306ab2a853@sha256:da01a20847074643911ed9345ce51a9b99140432219190ca44284b1377efd4be?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "104269600"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "|1 version=8.275.01.2 /bin/sh -c wget -O /THIRD-PARTY-LICENSES-20200824.tar.gz https://corretto.aws/downloads/resources/licenses/alpine/THIRD-PARTY-LICENSES-20200824.tar.gz &&     echo \"82f3e50e71b2aee21321b2b33de372feed5befad6ef2196ddec92311bc09becb  /THIRD-PARTY-LICENSES-20200824.tar.gz\" | sha256sum -c - &&     tar x -ovzf THIRD-PARTY-LICENSES-20200824.tar.gz &&     rm -rf THIRD-PARTY-LICENSES-20200824.tar.gz &&     wget -O /etc/apk/keys/amazoncorretto.rsa.pub https://apk.corretto.aws/amazoncorretto.rsa.pub &&     SHA_SUM=\"6cfdf08be09f32ca298e2d5bd4a359ee2b275765c09b56d514624bf831eafb91\" &&     echo \"${SHA_SUM}  /etc/apk/keys/amazoncorretto.rsa.pub\" | sha256sum -c - &&     echo \"https://apk.corretto.aws\" >> /etc/apk/repositories &&     apk add --no-cache amazon-corretto-8-jre=$version-r0"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

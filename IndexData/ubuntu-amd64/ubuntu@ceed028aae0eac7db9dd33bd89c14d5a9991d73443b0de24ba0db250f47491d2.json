@@ -1,0 +1,102 @@
+{
+    "50858308da3d192ec20027838c7aaf983333731dc2dcc0cd03c4522495a4cee8c7bb31fc0e0892ba47b0059aab580a5c7575289320d47890fd7110e82e31fd585f08512fd434ebecfa88e2e5321503762258950217478d5ba51b7a3876a036b7": [
+        {
+            "image_metadata": {
+                "repo": "ubuntu",
+                "image_tag": "bionic-20210512",
+                "last_updated": "2021-05-27T12:50:35.512861Z",
+                "tag_last_pushed": "2021-05-27T12:50:35.512861Z",
+                "arch": "amd64",
+                "image_digest": "sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2",
+                "image_status": "active",
+                "image_push_date": "2021-05-19T19:58:23.691746Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./ubuntu%40sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2%40sha256:81bcf752ac3dc8a12d54908ecdfe98a857c84285e5d50bed1d10f9812377abd6@sha256:50858308da3d192ec20027838c7aaf983333731dc2dcc0cd03c4522495a4cee8?index=0&ID=8022ded2daa3d1af",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:50858308da3d192ec20027838c7aaf983333731dc2dcc0cd03c4522495a4cee8",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "50858308da3d192ec20027838c7aaf983333731dc2dcc0cd03c4522495a4cee8"
+                        }
+                    ],
+                    "purl": "pkg:layer/./ubuntu%40sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2%40sha256:81bcf752ac3dc8a12d54908ecdfe98a857c84285e5d50bed1d10f9812377abd6@sha256:50858308da3d192ec20027838c7aaf983333731dc2dcc0cd03c4522495a4cee8?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "63074461"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:e05689b5b0d51a2316f8a87b1a9d6cbf90d98b19a424dbb924ee3d0b1cc17bfc in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./ubuntu%40sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2%40sha256:81bcf752ac3dc8a12d54908ecdfe98a857c84285e5d50bed1d10f9812377abd6@sha256:c7bb31fc0e0892ba47b0059aab580a5c7575289320d47890fd7110e82e31fd58?index=1&ID=f0c82ec6ca66b542",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:c7bb31fc0e0892ba47b0059aab580a5c7575289320d47890fd7110e82e31fd58",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "c7bb31fc0e0892ba47b0059aab580a5c7575289320d47890fd7110e82e31fd58"
+                        }
+                    ],
+                    "purl": "pkg:layer/./ubuntu%40sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2%40sha256:81bcf752ac3dc8a12d54908ecdfe98a857c84285e5d50bed1d10f9812377abd6@sha256:c7bb31fc0e0892ba47b0059aab580a5c7575289320d47890fd7110e82e31fd58?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "745"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -xe \t\t&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d \t&& echo 'exit 101' >> /usr/sbin/policy-rc.d \t&& chmod +x /usr/sbin/policy-rc.d \t\t&& dpkg-divert --local --rename --add /sbin/initctl \t&& cp -a /usr/sbin/policy-rc.d /sbin/initctl \t&& sed -i 's/^exit.*/exit 0/' /sbin/initctl \t\t&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup \t\t&& echo 'DPkg::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' > /etc/apt/apt.conf.d/docker-clean \t&& echo 'APT::Update::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' >> /etc/apt/apt.conf.d/docker-clean \t&& echo 'Dir::Cache::pkgcache \"\"; Dir::Cache::srcpkgcache \"\";' >> /etc/apt/apt.conf.d/docker-clean \t\t&& echo 'Acquire::Languages \"none\";' > /etc/apt/apt.conf.d/docker-no-languages \t\t&& echo 'Acquire::GzipIndexes \"true\"; Acquire::CompressionTypes::Order:: \"gz\";' > /etc/apt/apt.conf.d/docker-gzip-indexes \t\t&& echo 'Apt::AutoRemove::SuggestsImportant \"false\";' > /etc/apt/apt.conf.d/docker-autoremove-suggests"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./ubuntu%40sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2%40sha256:81bcf752ac3dc8a12d54908ecdfe98a857c84285e5d50bed1d10f9812377abd6@sha256:5f08512fd434ebecfa88e2e5321503762258950217478d5ba51b7a3876a036b7?index=2&ID=fed46469162da0ae",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:5f08512fd434ebecfa88e2e5321503762258950217478d5ba51b7a3876a036b7",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "5f08512fd434ebecfa88e2e5321503762258950217478d5ba51b7a3876a036b7"
+                        }
+                    ],
+                    "purl": "pkg:layer/./ubuntu%40sha256:ceed028aae0eac7db9dd33bd89c14d5a9991d73443b0de24ba0db250f47491d2%40sha256:81bcf752ac3dc8a12d54908ecdfe98a857c84285e5d50bed1d10f9812377abd6@sha256:5f08512fd434ebecfa88e2e5321503762258950217478d5ba51b7a3876a036b7?index=2",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "7"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "mkdir -p /run/systemd && echo 'docker' > /run/systemd/container"
+                        },
+                        {
+                            "name": "index",
+                            "value": "2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

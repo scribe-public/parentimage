@@ -1,0 +1,130 @@
+{
+    "c55d5dbdab4094da9ba390de49be10dd3b42e990670236a81a792fd2c933fcebb016ee01f53348d83edc70527ee5c09c2acaa88a1d87c3c94ca3145c5a670c854b6ffbd9ef18cee2a0d53c6a6a196968cff60ce18748e8f156fcdde50d8c369d49bde9541ba67dd853a29f46c9be5e7ac57e466ff91b72ee3231cc2c9686284c": [
+        {
+            "image_metadata": {
+                "repo": "node",
+                "image_tag": "16.6.2-alpine3.13",
+                "last_updated": "2021-08-18T13:59:55.091094Z",
+                "tag_last_pushed": "2021-08-18T13:59:55.091094Z",
+                "arch": "arm64",
+                "image_digest": "sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a",
+                "image_status": "active",
+                "image_push_date": "2021-08-18T03:23:40.893319Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:c55d5dbdab4094da9ba390de49be10dd3b42e990670236a81a792fd2c933fceb?index=0&ID=b994701ce41826da",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:c55d5dbdab4094da9ba390de49be10dd3b42e990670236a81a792fd2c933fceb",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "c55d5dbdab4094da9ba390de49be10dd3b42e990670236a81a792fd2c933fceb"
+                        }
+                    ],
+                    "purl": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:c55d5dbdab4094da9ba390de49be10dd3b42e990670236a81a792fd2c933fceb?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "5346028"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:ca9d8b5d1cc2f2186983fc6b9507da6ada5eb92f2b518c06af1128d5396c6f34 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:b016ee01f53348d83edc70527ee5c09c2acaa88a1d87c3c94ca3145c5a670c85?index=1&ID=ee26f1fae331b19e",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:b016ee01f53348d83edc70527ee5c09c2acaa88a1d87c3c94ca3145c5a670c85",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "b016ee01f53348d83edc70527ee5c09c2acaa88a1d87c3c94ca3145c5a670c85"
+                        }
+                    ],
+                    "purl": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:b016ee01f53348d83edc70527ee5c09c2acaa88a1d87c3c94ca3145c5a670c85?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "98544373"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "addgroup -g 1000 node     && adduser -u 1000 -G node -s /bin/sh -D node     && apk add --no-cache         libstdc++     && apk add --no-cache --virtual .build-deps         curl     && ARCH= && alpineArch=\"$(apk --print-arch)\"       && case \"${alpineArch##*-}\" in         x86_64)           ARCH='x64'           CHECKSUM=\"f77b8782059a4f614e8cd0437e7b4761039f93410388fe1d1f9c072de69e98de\"           ;;         *) ;;       esac   && if [ -n \"${CHECKSUM}\" ]; then     set -eu;     curl -fsSLO --compressed \"https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\";     echo \"$CHECKSUM  node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\" | sha256sum -c -       && tar -xJf \"node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\" -C /usr/local --strip-components=1 --no-same-owner       && ln -s /usr/local/bin/node /usr/local/bin/nodejs;   else     echo \"Building from source\"     && apk add --no-cache --virtual .build-deps-full         binutils-gold         g++         gcc         gnupg         libgcc         linux-headers         make         python3     && for key in       4ED778F539E3634C779C87C6D7062848A1AB005C       94AE36675C464D64BAFA68DD7434390BDBE9B9C5       74F12602B6F1C4E913FAA37AD3A89613643B6201       71DCFD284A79C3B38668286BC97EC7A07EDE3FC1       8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600       C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8       C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C       DD8F2338BAE7501E3DD5AC78C273792F7D83545D       A48C2BEE680E841632CD4E44F07496B3EB3C1762       108F52B48DB57BB0CC439B2997B01419BD92F80A       B9E2F5981AA6E0CD28160D9FF13993A75599653C     ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$key\" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\" ;     done     && curl -fsSLO --compressed \"https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.xz\"     && curl -fsSLO --compressed \"https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc\"     && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc     && grep \" node-v$NODE_VERSION.tar.xz\\$\" SHASUMS256.txt | sha256sum -c -     && tar -xf \"node-v$NODE_VERSION.tar.xz\"     && cd \"node-v$NODE_VERSION\"     && ./configure     && make -j$(getconf _NPROCESSORS_ONLN) V=     && make install     && apk del .build-deps-full     && cd ..     && rm -Rf \"node-v$NODE_VERSION\"     && rm \"node-v$NODE_VERSION.tar.xz\" SHASUMS256.txt.asc SHASUMS256.txt;   fi   && rm -f \"node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz\"   && apk del .build-deps   && node --version   && npm --version"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:4b6ffbd9ef18cee2a0d53c6a6a196968cff60ce18748e8f156fcdde50d8c369d?index=2&ID=a584ce91352ae01d",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:4b6ffbd9ef18cee2a0d53c6a6a196968cff60ce18748e8f156fcdde50d8c369d",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "4b6ffbd9ef18cee2a0d53c6a6a196968cff60ce18748e8f156fcdde50d8c369d"
+                        }
+                    ],
+                    "purl": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:4b6ffbd9ef18cee2a0d53c6a6a196968cff60ce18748e8f156fcdde50d8c369d?index=2",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "7834506"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "apk add --no-cache --virtual .build-deps-yarn curl gnupg tar   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys \"$key\" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys \"$key\" ;   done   && curl -fsSLO --compressed \"https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz\"   && curl -fsSLO --compressed \"https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc\"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && apk del .build-deps-yarn   && yarn --version"
+                        },
+                        {
+                            "name": "index",
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:49bde9541ba67dd853a29f46c9be5e7ac57e466ff91b72ee3231cc2c9686284c?index=3&ID=71db4fdbf2145184",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:49bde9541ba67dd853a29f46c9be5e7ac57e466ff91b72ee3231cc2c9686284c",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "49bde9541ba67dd853a29f46c9be5e7ac57e466ff91b72ee3231cc2c9686284c"
+                        }
+                    ],
+                    "purl": "pkg:layer/./node%40sha256:f07d1a627c04b2211598bf1b2790642a9e15cc714d0424d5dfb6615d18f74b8a%40sha256:f22f07ae55a862382270401dacba1d0d214c8ad9779254ff3b254ad4c06a8bba@sha256:49bde9541ba67dd853a29f46c9be5e7ac57e466ff91b72ee3231cc2c9686284c?index=3",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "116"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:238737301d47304174e4d24f4def935b29b3069c03c72ae8de97d94624382fce in /usr/local/bin/ "
+                        },
+                        {
+                            "name": "index",
+                            "value": "3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

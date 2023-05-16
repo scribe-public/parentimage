@@ -90,6 +90,7 @@ To run image population run:
     --product_list product_list filename, defaults to product_list.json
     --image_index image_index filename, defaults to image_index.json
     --erase_index flag, if exist will erase the image_index file at the beginning of run
+    --small_index flag, if present it will base off of the small index template, ie giving less technical info. If not present, will run off of folder system style of large index
 ```
 
 The script will create folder for each product in the product list, that will containt sboms and a layer synopsis for each of all base image versions,  and files for tracking the which images have been downloaded and which are pending. This allows re-running the script without re-downloading everything.
@@ -110,7 +111,7 @@ In case one wants a condensed version - a map from hash concatination to the ima
     python3 ImgIndexCleaner.py [options]
     options:
 
-    --image_index  image index filename, defaults to image_inded.json
+    --image_index  image index filename, defaults to image_index.json
     --outfile      filename for output file, defaults to small_image_index.json
 ```
 

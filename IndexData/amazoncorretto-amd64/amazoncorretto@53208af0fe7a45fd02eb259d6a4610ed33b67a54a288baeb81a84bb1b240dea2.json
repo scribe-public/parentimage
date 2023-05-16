@@ -1,0 +1,74 @@
+{
+    "a2925614516b6afe24537338707a1ff1f9b89f61e7df03a618ed78d91da31dabe86bf338b7f71db791971376eb7f4aac9c841be454fd5653441519fff9756389": [
+        {
+            "image_metadata": {
+                "repo": "amazoncorretto",
+                "image_tag": "11.0.5",
+                "last_updated": "2020-01-10T01:47:24.760553Z",
+                "tag_last_pushed": "2020-01-10T01:47:24.760553Z",
+                "arch": "amd64",
+                "image_digest": "sha256:53208af0fe7a45fd02eb259d6a4610ed33b67a54a288baeb81a84bb1b240dea2",
+                "image_status": "active",
+                "image_push_date": null
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:53208af0fe7a45fd02eb259d6a4610ed33b67a54a288baeb81a84bb1b240dea2%40sha256:ee899761d2f952e886840729254e5af2253e1be7fb4c190175cfdf9f9ea3211a@sha256:a2925614516b6afe24537338707a1ff1f9b89f61e7df03a618ed78d91da31dab?index=0&ID=60fac59165f5876c",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:a2925614516b6afe24537338707a1ff1f9b89f61e7df03a618ed78d91da31dab",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "a2925614516b6afe24537338707a1ff1f9b89f61e7df03a618ed78d91da31dab"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:53208af0fe7a45fd02eb259d6a4610ed33b67a54a288baeb81a84bb1b240dea2%40sha256:ee899761d2f952e886840729254e5af2253e1be7fb4c190175cfdf9f9ea3211a@sha256:a2925614516b6afe24537338707a1ff1f9b89f61e7df03a618ed78d91da31dab?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "162499868"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:21f17d9ead4aa13446f2144c5042f6f83bc7dc26163bdc2ea6de306b67154747 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:53208af0fe7a45fd02eb259d6a4610ed33b67a54a288baeb81a84bb1b240dea2%40sha256:ee899761d2f952e886840729254e5af2253e1be7fb4c190175cfdf9f9ea3211a@sha256:e86bf338b7f71db791971376eb7f4aac9c841be454fd5653441519fff9756389?index=1&ID=b08c2917211f6f41",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:e86bf338b7f71db791971376eb7f4aac9c841be454fd5653441519fff9756389",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "e86bf338b7f71db791971376eb7f4aac9c841be454fd5653441519fff9756389"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:53208af0fe7a45fd02eb259d6a4610ed33b67a54a288baeb81a84bb1b240dea2%40sha256:ee899761d2f952e886840729254e5af2253e1be7fb4c190175cfdf9f9ea3211a@sha256:e86bf338b7f71db791971376eb7f4aac9c841be454fd5653441519fff9756389?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "331851227"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "|6 key_aarch64=13817E35D6AA26BB2D85267712EABAC5209DDBC0 key_x64=13817E35D6AA26BB2D85267712EABAC5209DDBC0 path_aarch64=https://d3pxv6yz143wms.cloudfront.net/11.0.5.10.1 path_x64=https://d3pxv6yz143wms.cloudfront.net/11.0.5.10.1 rpm_aarch64=java-11-amazon-corretto-devel-11.0.5.10-1.aarch64.rpm rpm_x64=java-11-amazon-corretto-devel-11.0.5.10-1.x86_64.rpm /bin/sh -c set -eux;     case \"$(uname -p)\" in         x86_64) rpm=$rpm_x64; path=$path_x64; key=$key_x64 ;;         aarch64) rpm=$rpm_aarch64; path=$path_aarch64; key=$key_aarch64 ;;         *) echo >&2 \"Unsupported architecture $(uname -p).\"; exit 1 ;;     esac;         curl -O $path/$rpm     && export GNUPGHOME=\"$(mktemp -d)\"     && gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys $key     && gpg --armor --export $key > corretto.asc     && rpm --import corretto.asc     && rpm -K $rpm     && rpm -i $rpm     && rm -r $GNUPGHOME corretto.asc $rpm     && yum install -y fontconfig     && yum clean all"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

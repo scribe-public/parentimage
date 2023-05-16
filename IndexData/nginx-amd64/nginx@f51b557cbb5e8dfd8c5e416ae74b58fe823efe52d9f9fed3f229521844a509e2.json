@@ -1,0 +1,186 @@
+{
+    "1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16dad93babfd60c3875e2a7ec89948ba366ec4c1e842b62f6a837471b120b25d8445af959103b901c3e40ecdcdf25b2837bcc96a7c865e1d9f90c347320a761f69c385374b911f2e7a97dd50c5a88a23cead5c5b01624cc31850858012020013610eabae5075c43aa962e48a05d399084335688e8c4165f8577e27d0a0232601cfe3d71b657b020afb4f390f6f81cf4c19d238aa669eadb658c2af79114ca13aa7a": [
+        {
+            "image_metadata": {
+                "repo": "nginx",
+                "image_tag": "1.21.4-alpine",
+                "last_updated": "2021-11-13T12:28:32.432848Z",
+                "tag_last_pushed": "2021-11-13T12:28:32.432848Z",
+                "arch": "amd64",
+                "image_digest": "sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2",
+                "image_status": "active",
+                "image_push_date": "2021-11-13T05:21:12.326435Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d?index=0&ID=c9a3b277779d20cd",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:1a058d5342cc722ad5439cacae4b2b4eedde51d8fe8800fcf28444302355c16d?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "5600589"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) ADD file:762c899ec0505d1a32930ee804c5b008825f41611161be104076cba33b7e5b2b in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:ad93babfd60c3875e2a7ec89948ba366ec4c1e842b62f6a837471b120b25d844?index=1&ID=a5e0a2fd5e1ad4f0",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:ad93babfd60c3875e2a7ec89948ba366ec4c1e842b62f6a837471b120b25d844",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "ad93babfd60c3875e2a7ec89948ba366ec4c1e842b62f6a837471b120b25d844"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:ad93babfd60c3875e2a7ec89948ba366ec4c1e842b62f6a837471b120b25d844?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "17566018"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch=\"$(cat /etc/apk/arch)\"     && nginxPackages=\"         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     \"     && apk add --no-cache --virtual .checksum-deps         openssl     && case \"$apkArch\" in         x86_64|aarch64)             set -x             && KEY_SHA512=\"e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin\"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ \"$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)\" = \"$KEY_SHA512\" ]; then                 echo \"key verification succeeded!\";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo \"key verification failed!\";                 exit 1;             fi             && apk add -X \"https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\\.[0-9]+' /etc/alpine-release)/main\" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir=\"$(mktemp -d)\"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c \"                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\\\"f917c27702aa89cda46878fc80d446839c592c43ce7f251b3f4ced60c7033d34496a92d283927225d458cbc4f2f89499e7fb16344923317cd7725ad722eaf93e *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\\\"                 && if [ \\\"\\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\\\" = \\\"\\$PKGOSSCHECKSUM\\\" ]; then                     echo \\\"pkg-oss tarball checksum verification succeeded!\\\";                 else                     echo \\\"pkg-oss tarball checksum verification failed!\\\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 \"             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n \"$tempDir\" ]; then rm -rf \"$tempDir\"; fi     && if [ -n \"/etc/apk/keys/abuild-key.rsa.pub\" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n \"/etc/apk/keys/nginx_signing.rsa.pub\" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps=\"$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, \"\\nso:\", $2); print \"so:\" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )\"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:5af959103b901c3e40ecdcdf25b2837bcc96a7c865e1d9f90c347320a761f69c?index=2&ID=bdfa924259555f30",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:5af959103b901c3e40ecdcdf25b2837bcc96a7c865e1d9f90c347320a761f69c",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "5af959103b901c3e40ecdcdf25b2837bcc96a7c865e1d9f90c347320a761f69c"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:5af959103b901c3e40ecdcdf25b2837bcc96a7c865e1d9f90c347320a761f69c?index=2",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "1202"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:385374b911f2e7a97dd50c5a88a23cead5c5b01624cc31850858012020013610?index=3&ID=59ddcae0a8af9dcb",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:385374b911f2e7a97dd50c5a88a23cead5c5b01624cc31850858012020013610",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "385374b911f2e7a97dd50c5a88a23cead5c5b01624cc31850858012020013610"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:385374b911f2e7a97dd50c5a88a23cead5c5b01624cc31850858012020013610?index=3",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "1961"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d "
+                        },
+                        {
+                            "name": "index",
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:eabae5075c43aa962e48a05d399084335688e8c4165f8577e27d0a0232601cfe?index=4&ID=461f8d470cec3cee",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:eabae5075c43aa962e48a05d399084335688e8c4165f8577e27d0a0232601cfe",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "eabae5075c43aa962e48a05d399084335688e8c4165f8577e27d0a0232601cfe"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:eabae5075c43aa962e48a05d399084335688e8c4165f8577e27d0a0232601cfe?index=4",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "1037"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d "
+                        },
+                        {
+                            "name": "index",
+                            "value": "4"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:3d71b657b020afb4f390f6f81cf4c19d238aa669eadb658c2af79114ca13aa7a?index=5&ID=83d0276729e50b96",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:3d71b657b020afb4f390f6f81cf4c19d238aa669eadb658c2af79114ca13aa7a",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "3d71b657b020afb4f390f6f81cf4c19d238aa669eadb658c2af79114ca13aa7a"
+                        }
+                    ],
+                    "purl": "pkg:layer/./nginx%40sha256:f51b557cbb5e8dfd8c5e416ae74b58fe823efe52d9f9fed3f229521844a509e2%40sha256:b46db85084b80a87b94cc930a74105b74763d0175e14f5913ea5b07c312870f8@sha256:3d71b657b020afb4f390f6f81cf4c19d238aa669eadb658c2af79114ca13aa7a?index=5",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "4613"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d "
+                        },
+                        {
+                            "name": "index",
+                            "value": "5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

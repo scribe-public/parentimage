@@ -1,0 +1,74 @@
+{
+    "22665dc0becaf81075cb108132e3d4203c2a5da5ad95a95a33594bf034411696474cd2edaa861615ac41d9a84493ff0b2bacd05580a20e2f8922202fefa733dc": [
+        {
+            "image_metadata": {
+                "repo": "amazoncorretto",
+                "image_tag": "11.0.18-al2023-RC-headful",
+                "last_updated": "2023-03-24T23:42:38.04575Z",
+                "tag_last_pushed": "2023-03-24T23:42:38.04575Z",
+                "arch": "arm64",
+                "image_digest": "sha256:69e09e4a6223df4553aa52b2c4f72e5a18fc512be7bd41ccc6cdbe158b8b6ef8",
+                "image_status": "active",
+                "image_push_date": "2023-03-24T23:04:34.625161Z"
+            },
+            "image_layers": [
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:69e09e4a6223df4553aa52b2c4f72e5a18fc512be7bd41ccc6cdbe158b8b6ef8%40sha256:1c14acbcb8a2575cb6436835d401b93cc5b7e2816076529be602e37d46bd191f@sha256:22665dc0becaf81075cb108132e3d4203c2a5da5ad95a95a33594bf034411696?index=0&ID=0fd49cac48de23c3",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:22665dc0becaf81075cb108132e3d4203c2a5da5ad95a95a33594bf034411696",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "22665dc0becaf81075cb108132e3d4203c2a5da5ad95a95a33594bf034411696"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:69e09e4a6223df4553aa52b2c4f72e5a18fc512be7bd41ccc6cdbe158b8b6ef8%40sha256:1c14acbcb8a2575cb6436835d401b93cc5b7e2816076529be602e37d46bd191f@sha256:22665dc0becaf81075cb108132e3d4203c2a5da5ad95a95a33594bf034411696?index=0",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "178153855"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "#(nop) COPY dir:6216321324f425942c20403c2b329b848d15da8e81fc7ff80ef8243170c71d61 in / "
+                        },
+                        {
+                            "name": "index",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "bom-ref": "pkg:layer/./amazoncorretto%40sha256:69e09e4a6223df4553aa52b2c4f72e5a18fc512be7bd41ccc6cdbe158b8b6ef8%40sha256:1c14acbcb8a2575cb6436835d401b93cc5b7e2816076529be602e37d46bd191f@sha256:474cd2edaa861615ac41d9a84493ff0b2bacd05580a20e2f8922202fefa733dc?index=1&ID=df21087921f77496",
+                    "mime-type": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                    "type": "container",
+                    "group": "layer",
+                    "name": "sha256:474cd2edaa861615ac41d9a84493ff0b2bacd05580a20e2f8922202fefa733dc",
+                    "hashes": [
+                        {
+                            "alg": "SHA-256",
+                            "content": "474cd2edaa861615ac41d9a84493ff0b2bacd05580a20e2f8922202fefa733dc"
+                        }
+                    ],
+                    "purl": "pkg:layer/./amazoncorretto%40sha256:69e09e4a6223df4553aa52b2c4f72e5a18fc512be7bd41ccc6cdbe158b8b6ef8%40sha256:1c14acbcb8a2575cb6436835d401b93cc5b7e2816076529be602e37d46bd191f@sha256:474cd2edaa861615ac41d9a84493ff0b2bacd05580a20e2f8922202fefa733dc?index=1",
+                    "properties": [
+                        {
+                            "name": "size",
+                            "value": "225590861"
+                        },
+                        {
+                            "name": "CreatedBy",
+                            "value": "|1 version=11.0.18.10-1 /bin/sh -c set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo \"localpkg_gpgcheck=1\" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=(\"java-11-amazon-corretto-headless-$version.amzn2023.$(uname -m).rpm\" \"java-11-amazon-corretto-$version.amzn2023.$(uname -m).rpm\")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K \"${CORRETO_TEMP}/${rpm}\" | grep -F \"${CORRETO_TEMP}/${rpm}: digests signatures OK\" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-11-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf"
+                        },
+                        {
+                            "name": "index",
+                            "value": "1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
