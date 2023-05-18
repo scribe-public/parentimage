@@ -8,6 +8,8 @@ import json
 import logging
 from functools import cmp_to_key
 
+from dirToIndex import getIndexDataFiles, generateNewIndexDict
+
 from flask import Flask, jsonify, request
 
 def get_json(filename):
@@ -47,24 +49,43 @@ def get_base_image_endpoint():
     return result
 
 
-def get_base_image(hash_list):
-    global image_index
+def get_base_image(hash_list, args):
+    if args.small_index or args.large_index:
+        global image_index
     prefix = ""
     last = ""
-    for l in hash_list:
-        prefix += l
-        if prefix in image_index:
-            last = prefix
-        else:
-            break
-    if last in image_index:
-        return image_index[last]
+    if args.large_index or args.small_index:
+        for l in hash_list:
+            prefix += l
+            if prefix in image_index:
+                last = prefix
+            else:
+                break
+        if last in image_index:
+            return image_index[last]
+    elif args.folder_index:
+        index_dir_paths = getIndexDataFiles()
+        # ruled_out = False
+        present = False
+        for l in hash_list:
+            prefix += l
+            # if prefix in image_index:
+            for file in index_dir_paths:
+                if prefix in get_json(file):
+                    last = prefix
+                    present = True
+            if not present:
+                break
+        for file_path in index_dir_paths:
+            if last in get_json(file_path):
+                full_cont = get_json(file_path)
+                return full_cont[last]
 
     obj = {"Error":"Base image not found"} 
     log.info("Request:{} \nResult:{}".format(hash_list, obj))
     return obj
 
-def get_base_image_by_image_layers_obj(image_layers):
+def get_base_image_by_image_layers_obj(image_layers, args):
     sorted(image_layers, key = cmp_to_key(compare_layer))
     
     sorted(image_layers, key = cmp_to_key(compare_layer))
@@ -72,13 +93,14 @@ def get_base_image_by_image_layers_obj(image_layers):
     for l in image_layers:
         hash_list.append(l["hashes"][0]["content"]) 
     
-    return get_base_image(hash_list)
+    return get_base_image(hash_list, args)
 
     
 
 
-def get_base_image_by_sbom(gensbom_filename):
-    global image_index
+def get_base_image_by_sbom(gensbom_filename, args):
+    if args.small_index or args.large_index:
+        global image_index
     if(os.path.exists(gensbom_filename)):
         with open(gensbom_filename, 'r', encoding='utf-8') as f:
             sbom = json.load(f)
@@ -91,7 +113,7 @@ def get_base_image_by_sbom(gensbom_filename):
     for c in sbom["components"]:
         if (c["type"] =="container") and (c["group"] == "layer"):
             image_layers.append(c)
-    result = get_base_image_by_image_layers_obj(image_layers)
+    result = get_base_image_by_image_layers_obj(image_layers, args)
     log.info("Request:{} \nResult:{}".format(gensbom_filename, result))
     return result
 
@@ -111,10 +133,11 @@ def compare_layer(item1, item2):
     return 0
 
 def main(args):
-    global image_index
-    image_index = get_json(args.image_index)
+    if args.small_index or args.large_index:
+        global image_index
+        image_index = get_json(args.image_index)
     if args.sbom != "":
-        obj = get_base_image_by_sbom(args.sbom)
+        obj = get_base_image_by_sbom(args.sbom, args)
         write_json(args.output_file, obj)
     else:
         # Run as service
@@ -131,6 +154,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--sbom', type=str, default="", required=False)
     parser.add_argument('--output_file', type=str, default="base_image.json", required=False)
+    parser.add_argument('--large_index', action='store_true')
     parser.add_argument('--image_index', type=str, default="image_index.json", required=False)
+    parser.add_argument('--small_index', action='store_true')
+    parser.add_argument('--folder_index', action='store_true')
     args = parser.parse_args()
     main(args)

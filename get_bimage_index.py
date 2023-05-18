@@ -147,7 +147,30 @@ def add_image_layer_index(args, image_layer_filename, image_info, image_index_fi
         else:
             image_index[id] = [small_data]
         write_json(image_index_filename, image_index)
-    else:
+    elif args.large_index:
+        image_index = get_json(image_index_filename)
+        if image_index == None:
+            image_index = {}
+
+        id = ""
+        for l in image_layer_info["image_layers"]:
+            id += l["hashes"][0]["content"]
+
+        image_data = {}
+        image_data["image_metadata"] = image_info
+        image_data["image_layers"] = image_layer_info["image_layers"]
+
+
+        if id in image_index:
+            for im in image_index[id]:
+                if im['image_metadata']['image_digest'] == image_info['image_digest']:
+                    break
+            else:
+                image_index[id].append(image_data)
+        else:
+            image_index[id] = [image_data]
+        write_json(image_index_filename, image_index)
+    elif args.folder_index:
         id = ""
         for l in image_layer_info["image_layers"]:
             id += l["hashes"][0]["content"]
@@ -334,6 +357,8 @@ if __name__ == "__main__":
     parser.add_argument('--image_index', type=str, default="image_index.json", required=False)
     parser.add_argument('--erase_index', action='store_true')
     parser.add_argument('--small_index', action='store_true')
+    parser.add_argument('--large_index', action='store_true')
+    parser.add_argument('--folder_index', action='store_true')
     args = parser.parse_args()
     main(args)
 

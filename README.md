@@ -44,8 +44,11 @@ To find the base image of a given image, create an sbom using valint and then ru
     python3 get_base_image.py [options]
     options:
     --sbom          valint generated sbom filename. If no sbom is given the script will act as a service
-    --output_file   filename for saving the base-image metadata, defaults to base_image.json
-    --image_index   image index filename, defaults to image_index.json
+    --output_file    filename for saving the base-image metadata, defaults to base_image.json
+    --image_index    image index filename, defaults to image_index.json
+    --small_index    if running using the small index, which just gives basic info, ie. repo and tag
+    --large_index    if running using the large index, gives detailed info based on large json file
+    --folder_index   if running using the nested folder index, gives detailed info (same as large index) based on folder content
 ```
 
 When running as service, the following endpoints are supported:
@@ -90,7 +93,9 @@ To run image population run:
     --product_list product_list filename, defaults to product_list.json
     --image_index image_index filename, defaults to image_index.json
     --erase_index flag, if exist will erase the image_index file at the beginning of run
-    --small_index flag, if present it will base off of the small index template, ie giving less technical info. If not present, will run off of folder system style of large index
+    --small_index flag, if present it will base off of the small index template giving less technical info
+    --large_index flag, if present it will base off of the large index template giving the technical info
+    --folder_index flag, if present it will base off of the folder index template giving the technical info (same info as large)
 ```
 
 The script will create folder for each product in the product list, that will containt sboms and a layer synopsis for each of all base image versions,  and files for tracking the which images have been downloaded and which are pending. This allows re-running the script without re-downloading everything.
@@ -103,7 +108,7 @@ Another option is to run via docker. Note that this runs docker in docker:
 docker run -v ${pwd}:/ -v /var/run/docker.sock:/var/run/docker.sock  scribesecurity/base-image-tool
 ```
 
-The script creates (or updates) the image_index.json file, Which is a dictionary mapping base-image-ids to metadata about the base image.
+The script creates (or updates) the image_index.json file or a folder in the IndexData directory (depending on the tag you run the script with), Which is a dictionary mapping base-image-ids to metadata about the base image.
 
 In case one wants a condensed version - a map from hash concatination to the image tags only, run:
 
