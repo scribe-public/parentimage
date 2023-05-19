@@ -86,6 +86,8 @@ The path parameter is part of the Docker API url; for DockerHub approved or reco
 
 The refresh parameter enables refreshing the image_index calculation: the "index" option re-calculates the image_index entries based on existing sboms, and the "all" also re-creates the sboms. The index option is much faster since it does not require downloading the image
 
+Note that the population process involves intense interaction with DockerHub, thus it highly recommended to login to DockerHub before running the script.
+
 To run image population run:
 ```
     python3 get_bimage_index.py [options]
