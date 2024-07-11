@@ -1,0 +1,20 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generate JSON from GITHUB Environment Variables
+        id: generate-json
+        uses: scribe-public/scribe-labels@v0.0
+
+      - name: Print JSON output
+        run: echo "${{ steps.generate-json.outputs.github_env_json }}"
