@@ -14,7 +14,7 @@ jobs:
 
       - name: Generate JSON from GITHUB Environment Variables
         id: generate-json
-        uses: scribe-public/scribe-labels@V.0.0
+        uses: scribe-public/scribe-labels@0.0
 
       - name: Print JSON output
         run: echo "${{ steps.generate-json.outputs.github_env_json }}"
